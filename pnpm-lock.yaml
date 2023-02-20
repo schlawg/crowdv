@@ -1,0 +1,32 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@types/node': ^18.11.17
+  '@types/web': ^0.0.84
+  vosk-browser: ^0.0.8
+
+dependencies:
+  '@types/node': 18.14.0
+  '@types/web': 0.0.84
+  vosk-browser: 0.0.8
+
+packages:
+
+  /@types/node/18.14.0:
+    resolution: {integrity: sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==}
+    dev: false
+
+  /@types/web/0.0.84:
+    resolution: {integrity: sha512-FgWNoeTgX2GRAJzktyp/pqbwrwL7ifKE7FAxo4CA/mayBomylWKpSe4jaY8UqnrAFyHExfANP8DI8s+aHqaRgQ==}
+    dev: false
+
+  /uuid/9.0.0:
+    resolution: {integrity: sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==}
+    hasBin: true
+    dev: false
+
+  /vosk-browser/0.0.8:
+    resolution: {integrity: sha512-df9MuChirUGKxP/+4k8tBV6hJOic8IRdJXv64+ET0Ue5CddOzLZINiHOWCka765gBzHJWNtQKgaYakS0FXZIJA==}
+    dependencies:
+      uuid: 9.0.0
+    dev: false

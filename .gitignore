@@ -1,0 +1,6 @@
+www/**.js
+www/**.d.ts
+www/**.js.map
+tsconfig.tsbuildinfo
+node_modules
+.metals

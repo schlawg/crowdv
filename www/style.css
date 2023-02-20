@@ -1,0 +1,157 @@
+html {
+  font-size: 18px;
+  font-family: noto sans;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient(to right, #eee,#ccc);
+}
+h1 {
+  font-size: 2.0rem;
+  text-align: center;
+}
+h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin: 0;
+}
+h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+#results {
+  margin: 8px 8px;
+}
+#results h3 {
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+#all {
+  display: flex;
+  padding: 2.0rem 2.8rem 2.8rem;
+  flex-direction: column;
+  max-width: 480px;
+  min-height: 568px;
+  height: fit-content;
+  border-radius: 16px;
+  background: linear-gradient(to right, #f8e0e8, #ddd0d4);
+  border: 1px solid #aaa;
+}
+#interact {
+  display: flex;
+  margin-left: -1rem;
+  width: 100%;
+  flex-direction: row;
+}
+#instructions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex: auto;
+}
+#state0 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#state1, #state2, #state3, #state4, #state5 {
+  display: none;
+}
+#howard {
+  width: 80px;
+}
+#howard:hover{
+  cursor: pointer;
+  filter: brightness(120%);
+}
+#howard.disabled:hover {
+  cursor: default;
+  filter: none;
+}
+#howard-text {
+  font-size: 1rem;
+  font-family: roboto;
+  font-weight: bold;
+}
+#text {
+  text-align: center;
+}
+#howard-bubble {
+  --h:20px;
+  --w:30px;
+  --p:20px;
+  
+  text-align: center;
+  font-family: roboto;
+  color: #444;
+  margin: 30px;
+  width: 100%;
+  height: 60px;
+  display:inline-block;
+  border-radius: 15px;
+  background: white;
+  position: relative;
+  /*filter:
+    drop-shadow(0px 0px 1px #69f) 
+    drop-shadow(0px 0px 1px #69f) 
+    drop-shadow(0px 0px 1px #69f) 
+    drop-shadow(0px 0px 1px #69f) 
+    drop-shadow(0px 0px 1px #69f) 
+    drop-shadow(0px 0px 1px #69f);*/
+}
+
+#howard-bubble::before {
+  content: "";
+  left: 100%;
+  clip-path: polygon(0% 0, 0% 100%,100% 50%);
+  --b1:right;
+  bottom:var(--p);
+  --b2:bottom  calc(-1*var(--p) - var(--h));
+
+  position: absolute;
+  height: var(--h);
+  width: var(--w);
+  background: inherit;
+  transform:scale(var(--x,1),var(--y,1));
+  background-position:var(--b1) 0 var(--b2);
+}
+
+#howard-bubble > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+div {
+  width: 100%;
+}
+
+@media(max-width: 600px) {
+  html {
+    font-size: 17px;
+  }
+  div#all {
+    padding: 18px 26px 26px;
+    min-height: fit-content;
+  }
+}
+@media(max-width: 520px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media(max-width: 450px) {
+  html {
+    font-size: 15px;
+  }
+  div#all {
+    padding: 10px 16px 16px;
+    min-height: fit-content;
+  }
+}

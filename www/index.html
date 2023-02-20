@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Howard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="all">
+    <div id="instructions">
+    <div id="state0"> <!-- intro -->
+      <h1>Welcome Comrade!</h1>
+      
+      <p><b>Howard the octopus wants you to read to him.</b></p>
+      <p>Your audio data will not leave your computer. Only plain text is sent to lichess.</p>
+        <p>Allow this site to use your microphone when prompted.</p>
+        <p><b>Click the octopus to begin.</b></p>
+    </div>
+    <div id="state1"> <!-- round 1 -->
+      <h1>Round 1 - <span id="progress">Special Effort</span></h1>
+      <p>Your microphone is now active.</p><p>Howard wants you to speak each phrase that appears over him in bold. Speak loudly and speak each syllable clearly.</p>
+      <p>Always let Howard respond <i>before</i> saying <i>next</i>. Do <b>not</b> read his responses out loud.</p>
+      <p><b>Say <i>next</i> or click the octopus to fetch a phrase.</b></p>
+    </div>
+    <div id="state2"> <!-- round 2 -->
+      <h1>Round 2 - <span id="progress">Normal Effort</span></h1>
+      <p>Howard wants more phrases.</p><p>This time just use a normal conversational tone. Speak as if to a friend sitting next to you.</p>
+      <p>Remember, let Howard respond before saying <i>next</i>.</p>
+      <p><b>Say <i>next</i> or click him to fetch a phrase.</b></p>
+    </div>
+    <div id="state3"> <!-- round 3 -->
+      <h1>Round 3 - <span id="progress">Noise Pollution</span></h1>
+      <p>Looks like you've got the hang of it, now we test the limits...</p>
+      <p>Play some music in the background. Turn on a fan. Dictate moves using the voice of Christopher Walken or Fran Drescher. Or all of the above!</p>
+      <p><b>Say <i>next</i> or click Howard to proceed.</b></p>
+    </div>
+    <div id="state4"> <!-- done -->
+      <h1>Thanks for helping!</h1>
+      <p>Here's how you did:</p>
+      <div id="results"></div>
+      <p>Reload this page to do another run.</p>
+      <p>To remove Howard's files, clear site data for <code>crowdv.lichess.ovh</code> in your browser's website/privacy settings.</p>
+    </div>
+    <div id="state5">
+      <h1>Playdate</h1>
+      <p>You may now converse directly with the octopus. He only hears words about chess moves.</p>
+      <p>This stays between you and Howard (nothing is sent to the server). If you enjoy him so much, consider reloading this page for another run.</p>
+    </div>
+    </div>
+    <h2 id="text"></h2>
+    <div>
+      <!--hr-->
+      <div id="interact">
+        <div id="howard-bubble" ><div><p id="howard-text">Hello friend, I am Howard!</p></div></div>
+        <img id="howard" src="howard.svg" />
+        </div>
+    </div>
+    
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

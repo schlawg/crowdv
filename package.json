@@ -1,0 +1,21 @@
+{
+  "name": "voicecrowd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc",
+    "client": "esbuild src/main.ts --bundle --sourcemap --outfile=www/main.js --platform=browser --target=es2018 --format=iife",
+    "vosk": "esbuild src/vosk.ts --bundle --sourcemap --outfile=www/vosk.js --platform=browser --target=es2018 --format=iife",
+    "dev": "pnpm build && pnpm vosk && pnpm client",
+    "watch": "esbuild src/vosk.ts src/main.ts --sourcemap --outdir=www --bundle --watch --platform=browser --target=es2018 --format=iife"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.11.17",
+    "@types/web": "^0.0.84",
+    "vosk-browser": "^0.0.8"
+  }
+}
